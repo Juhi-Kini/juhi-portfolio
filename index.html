@@ -136,20 +136,16 @@
             color: var(--accent);
         }
         
-        /* About Section */
+        /* About Section - Left Aligned */
         .about-content {
             display: block;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+            text-align: left;
+            max-width: 100%;
+            margin: 0;
         }
         
-        .qualifications-container {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-top: 30px;
+        .about-text {
+            text-align: left;
         }
         
         /* Skills Section */
@@ -164,6 +160,7 @@
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
         }
         
         .skill-category h3 {
@@ -200,6 +197,7 @@
             border-radius: 5px;
             margin-bottom: 10px;
             border-left: 4px solid var(--accent);
+            text-align: left;
         }
         
         /* Education Section */
@@ -240,6 +238,7 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
         }
         
         .timeline-item::after {
@@ -275,6 +274,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
+            text-align: left;
         }
         
         .project-card:hover {
@@ -303,6 +303,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             max-width: 800px;
             margin: 0 auto;
+            text-align: left;
         }
         
         .qualification-item {
@@ -325,6 +326,7 @@
         
         .contact-info {
             flex: 1;
+            text-align: left;
         }
         
         .contact-form {
@@ -697,7 +699,7 @@
         </div>
     </section>
 
-        <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
@@ -717,27 +719,20 @@
                             <p>Mahim (West), Mumbai - 400016</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>juhikini0@gmail.com</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/mnnovqyg" method="POST" id="contactForm">
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            <input type="text" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                            <input type="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                            <input type="text" class="form-control" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
