@@ -728,6 +728,11 @@
                     </div>
                 </div>
                 <div class="contact-form">
+                    <!-- Success Message (Initially Hidden) -->
+                    <div id="successMessage" style="display: none; background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #c3e6cb;">
+                        <strong>✅ Success!</strong> Your message has been sent successfully. I'll get back to you soon!
+                    </div>
+                    
                     <form action="https://formspree.io/f/mnnovqyg" method="POST" id="contactForm">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -746,7 +751,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -761,8 +766,19 @@
         </div>
     </footer>
 
-        <script>
-    // REMOVED the form submission handler that was blocking Formspree
+    <script>
+    // Show success message and clear form after submission
+    document.getElementById('contactForm').addEventListener('submit', function() {
+        // Show success message
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Clear the form fields (optional)
+        setTimeout(() => {
+            document.getElementById('contactForm').reset();
+        }, 100);
+        
+        // The form will still submit to Formspree normally
+    });
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -781,5 +797,7 @@
             }
         });
     });
-</script></body>
+</script>
+    
+        </body>
 </html>
