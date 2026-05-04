@@ -296,28 +296,55 @@
         }
         
         /* Extra Qualifications - Left Aligned */
-.extra-qualifications {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    max-width: 100%;
-    margin: 0;
-    text-align: left;
-}
-
-.qualification-item {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #e9ecef;
-    text-align: left;
-}
-
-.qualification-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+        .extra-qualifications {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 100%;
+            margin: 0;
+            text-align: left;
+        }
+        
+        .qualification-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e9ecef;
+            text-align: left;
+        }
+        
+        .qualification-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        /* Internship Section */
+        .internship-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .internship-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .internship-card p {
+            margin-bottom: 10px;
+        }
+        
+        .internship-card ul {
+            margin-top: 10px;
+            margin-left: 20px;
+            color: var(--gray);
+        }
+        
+        .internship-card li {
+            margin-bottom: 8px;
+        }
         
         /* Contact Section */
         .contact-container {
@@ -473,7 +500,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                
+                <li><a href="#internship">Internship</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -682,8 +709,28 @@
         </div>
     </section>
 
-        <!-- Extra Qualifications Section -->
-    <section id="extra-qualifications">
+    <!-- Internship Section -->
+    <section id="internship">
+        <div class="container">
+            <h2>Internship Experience</h2>
+            <div class="internship-card">
+                <h3>E-Commerce Intern</h3>
+                <p><strong>Company:</strong> ALBuraq Ventures Private Limited</p>
+                <p><strong>Duration:</strong> 3 months (Ending 23rd May 2026)</p>
+                <p><strong>Stipend:</strong> ₹7,500 per month</p>
+                <p><strong>Key Responsibilities:</strong></p>
+                <ul>
+                    <li>Product management on Shopify website</li>
+                    <li>Managing and updating product listings, inventory, and pricing</li>
+                    <li>Ensuring smooth e-commerce operations and customer experience</li>
+                    <li>Collaborating with team members to optimize product displays</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Qualifications Section -->
+    <section id="extra-qualifications" style="background-color: #f8f9fa;">
         <div class="container">
             <h2>Extra Qualifications</h2>
             <div class="extra-qualifications">
@@ -700,7 +747,7 @@
         </div>
     </section>
         
-        <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
@@ -729,8 +776,6 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <!-- REMOVED the green success message box -->
-                    
                     <form action="https://formspree.io/f/mnnovqyg" method="POST" id="contactForm">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -750,7 +795,8 @@
             </div>
         </div>
     </section>
-<!-- Footer -->
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Juhi Kini. All Rights Reserved.</p>
@@ -765,31 +811,31 @@
     </footer>
 
     <script>
-    // Show alert message after form submission
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        // Show alert message
-        alert('✅ Success! Your message has been sent successfully. I will get back to you soon!');
-        
-        // The form will still submit to Formspree normally
-    });
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        // Show alert message after form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Show alert message
+            alert('✅ Success! Your message has been sent successfully. I will get back to you soon!');
             
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
+            // The form will still submit to Formspree normally
         });
-    });
-</script>   
-        </body>
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>   
+</body>
 </html>
